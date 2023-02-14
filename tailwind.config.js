@@ -10,6 +10,10 @@ module.exports = {
           dark: '#1D242E',
         },
       },
+      fontFamily: {
+        arial: ['Arial'],
+        poppins: ['Poppins'],
+      },
     },
   },
   plugins: [],
