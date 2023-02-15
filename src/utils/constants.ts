@@ -139,7 +139,7 @@ export const DOCTOR_INSIGHT_DATA = {
   } as Cards,
   analyses: {
     'competitive-landscape': {
-      to: '/doctor-insight/competitive-landscape',
+      to: '/doctor-insight/competitive-landscape-analysis',
       title: 'Competitive Landscape Analysis',
       description:
         'This analysis provides insight on doctors’ feedback regarding value added by company scientific engagement and sales representative visits. Insights from the analysis could be a useful metric for benchmarking your company’s scientific and salesforce engagement towards seeking areas of improvement whilst also assessing impact of investment in these activities.',
@@ -147,7 +147,7 @@ export const DOCTOR_INSIGHT_DATA = {
       color: '#289DAE',
     },
     'digital-preference': {
-      to: '/doctor-insight/digital-preference',
+      to: '/doctor-insight/digital-preference-analysis',
       title: 'Digital Preference Analysis',
       description:
         'This analysis provides insight on openness of doctors to be engaged virtually and most preferred digital channel for engagement by companies. Insight from this analytics enables planning and execution of multi-channel engagement as use of mobile devices, internet penetration, and use of social media as source of disease and therapeutic information evolves within the industry.',
