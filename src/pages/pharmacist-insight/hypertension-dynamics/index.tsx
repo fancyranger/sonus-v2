@@ -4,7 +4,7 @@ import Card from '@/components/Card';
 import { PHARMACIST_INSIGHT_DATA } from '@/utils/constants';
 
 export default function () {
-  const cards = PHARMACIST_INSIGHT_DATA.dynamics['diabetes-dynamics'].data;
+  const cards = PHARMACIST_INSIGHT_DATA.dynamics['hypertension-dynamics'].data;
 
   return (
     <>
@@ -12,7 +12,7 @@ export default function () {
         <title>SONUS Pharmacist Insight</title>
       </Head>
 
-      <h1 className="mb-7">Pharmacist Insight - Diabetes Dynamics</h1>
+      <h1 className="mb-7">Pharmacist Insight - Hypertension Dynamics</h1>
 
       <div className="grid grid-cols-3 mb-10">
         <div className="col-span-2 px-4 py-3 bg-white rounded-lg">

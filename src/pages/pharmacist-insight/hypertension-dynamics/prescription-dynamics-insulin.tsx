@@ -7,7 +7,7 @@ export default function () {
         <title>SONUS Pharmacist Insight</title>
       </Head>
 
-      <h1 className="mb-7">Pharmacist Insight - Diabetes Dynamics - Pharmacist Insight</h1>
+      <h1 className="mb-7">Pharmacist Insight - Hypertension Dynamics - Prescription Dynamics (Insulin)</h1>
 
       <div className="grid grid-cols-3 mb-10">
         <div className="col-span-2 px-4 py-3 bg-white rounded-lg">
