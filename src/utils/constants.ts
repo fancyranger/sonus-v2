@@ -163,6 +163,40 @@ export const DOCTOR_INSIGHT_DATA = {
         'The Diabetes Dynamics offers insight on Type 1 and Type 2 diabetes, specifically on doctors’ behaviors, motivations, unmet patient needs and other critical information to aid strategic planning, tactical execution and performance assessment.',
       bg: '#BCA3C74D',
       color: '#674775',
+      data: {
+        'patient-opportunity-analysis': {
+          to: '/doctor-insight/respiratory-dynamics/patient-opportunity-analysis',
+          title: 'Patient Opportunity Analysis',
+          description:
+            'This analysis provides insight on number of patients encountered, newly diagnosed patients, number of patients encountered, newly diagnosed patients, and patients with uncontrolled type 1 and 2 diabetes respectively.',
+          bg: '#BCA3C74D',
+          color: '#674775',
+        },
+        'prescription-dynamics': {
+          to: '/doctor-insight/respiratory-dynamics/prescription-dynamics',
+          title: 'Prescription Dynamics',
+          description:
+            'This analysis provides insight on Oral Antidiabetics and Insulin class preference for uncontrolled diabetes, molecule preference, choice of brands and generics, reported outcomes, FBG or HBA1c control, brand selection criteria, population on insulin and oral antidiabetics',
+          bg: '#5FAD564D',
+          color: '#3B6E35',
+        },
+        'brand-preference-and-recall': {
+          to: '/doctor-insight/respiratory-dynamics/brand-preference-and-recall',
+          title: 'Brand Preference and Recall',
+          description:
+            'This analysis provides insight on brand top-of-mind audit and brand preference for both oral antidiabetics and insulins for treatment of type 2 and type 1 diabetes respectively.',
+          bg: '#FF95054D',
+          color: '#995800',
+        },
+        'barriers-to-treatment': {
+          to: '/doctor-insight/respiratory-dynamics/barriers-to-treatment',
+          title: 'Barriers to Treatment',
+          description:
+            'This analysis provides insight on barriers to treatment for patients with type 1 and type 2 diabetes respectively in treatment with oral antidiabetics and insulins.',
+          bg: '#E7DDDD4D',
+          color: '#986D6D',
+        },
+      },
     },
     'anti-infectives-dynamics': {
       to: '/doctor-insight/anti-infectives-dynamics',
