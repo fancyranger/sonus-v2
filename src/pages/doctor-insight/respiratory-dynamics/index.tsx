@@ -4,7 +4,7 @@ import Card from '@/components/Card';
 import { DOCTOR_INSIGHT_DATA } from '@/utils/constants';
 
 export default function () {
-  const cards = DOCTOR_INSIGHT_DATA.dynamics['oncology-dynamics'].data;
+  const cards = DOCTOR_INSIGHT_DATA.dynamics['respiratory-dynamics'].data;
 
   return (
     <>

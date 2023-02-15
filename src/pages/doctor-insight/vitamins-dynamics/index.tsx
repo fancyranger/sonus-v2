@@ -4,7 +4,7 @@ import Card from '@/components/Card';
 import { DOCTOR_INSIGHT_DATA } from '@/utils/constants';
 
 export default function () {
-  const cards = DOCTOR_INSIGHT_DATA.dynamics['anti-infectives-dynamics'].data;
+  const cards = DOCTOR_INSIGHT_DATA.dynamics['vitamins-dynamics'].data;
 
   return (
     <>
@@ -12,7 +12,7 @@ export default function () {
         <title>SONUS Doctor Insight</title>
       </Head>
 
-      <h1 className="mb-7">Doctor Insight - Anti-infectives Dynamics</h1>
+      <h1 className="mb-7">Doctor Insight - Vitamins Dynamics</h1>
 
       <div className="grid grid-cols-3 mb-10">
         <div className="col-span-2 px-4 py-3 bg-white rounded-lg">
