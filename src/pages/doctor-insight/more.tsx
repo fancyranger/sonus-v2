@@ -1,36 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Card from '@/components/Card';
-import type { TCard } from '@/utils/interface';
+import { DOCTOR_INSIGHT_DATA } from '@/utils/constants';
 
-export default function DoctorInsight() {
-  const dynamics: TCard[] = [
-    {
-      to: '/doctor-insight/respiratory-dynamics',
-      title: 'Respiratory Dynamics',
-      description:
-        'The Diabetes Dynamics offers insight on Type 1 and Type 2 diabetes, specifically on doctors’ behaviors, motivations, unmet patient needs and other critical information to aid strategic planning, tactical execution and performance assessment.',
-      bg: '#BCA3C74D',
-      color: '#674775',
-    },
-    {
-      to: '/doctor-insight/anti-infectives-dynamics',
-      title: 'Anti-infectives Dynamics',
-      description:
-        'The Hypertension Dynamics enables exploration of the behaviors, preferences, and knowledge of doctors regarding patient numbers, unmet needs, and therapeutics in the management of hypertension.',
-      bg: '#5FAD564D',
-      color: '#3B6E35',
-    },
-    {
-      to: '/doctor-insight/vitamins-dynamics',
-      title: 'Vitamins Dynamics',
-      description:
-        'The Oncology Dynamics enables a deep dive analysis of behaviours, preferences, and knowledge of oncologists as it relates to cancer patient counts, unmet needs, and therapeutics in management of prostate and breast cancer.',
-      bg: '#FF95054D',
-      color: '#8F5200',
-    },
-  ];
-
+export default function () {
   return (
     <>
       <Head>
@@ -59,7 +32,7 @@ export default function DoctorInsight() {
       </div>
 
       <div className="grid grid-cols-3 mb-7">
-        {dynamics.map(({ to, title, description, bg, color }) => (
+        {Object.values(DOCTOR_INSIGHT_DATA.more).map(({ to, title, description, bg, color }) => (
           <Card key={to} className="mr-5 mb-5" style={{ background: bg }}>
             <h3 className="mb-5" style={{ color }}>
               {title}
@@ -68,12 +41,6 @@ export default function DoctorInsight() {
             <Link href={to}>View more</Link>
           </Card>
         ))}
-      </div>
-
-      <div className="flex mb-12">
-        <Link href="/doctor-insight" className="bg-[#96C9D3]">
-          Back
-        </Link>
       </div>
     </>
   );

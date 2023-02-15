@@ -5,35 +5,35 @@
 @tailwind utilities;
 
 body {
-	@apply text-cyan-blue-dark;
-	background-color: #d8d6d6;
-	font-family: arial;
+  @apply text-cyan-blue-dark;
+  background-color: #d8d6d6;
+  font-family: arial;
 }
 
 aside {
-	background: linear-gradient(179.33deg, #00b4db -23.61%, #13768b 60.72%);
+  background: linear-gradient(179.33deg, #00b4db -23.61%, #13768b 60.72%);
 }
 
 @layer base {
-	h1 {
-		@apply text-primary font-bold text-2xl;
-	}
+  h1 {
+    @apply text-primary font-bold text-2xl;
+  }
 
-	a {
-		@apply px-5 py-2.5 text-white bg-primary font-bold rounded-lg;
-	}
+  a {
+    @apply px-5 py-2.5 text-white bg-primary font-bold rounded-lg;
+  }
 }
 
 @layer components {
-	.card > h3 {
-		@apply text-lg font-bold;
-	}
+  .card > h3 {
+    @apply text-lg font-bold;
+  }
 
-	.card > p {
-		@apply grow;
-	}
+  .card > p {
+    @apply grow;
+  }
 
-	.card > a {
-		@apply place-self-end;
-	}
+  .card > a {
+    @apply place-self-end;
+  }
 }

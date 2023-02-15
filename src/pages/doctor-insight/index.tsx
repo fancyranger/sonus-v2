@@ -1,54 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Card from '@/components/Card';
-import type { TCard } from '@/utils/interface';
+import { DOCTOR_INSIGHT_DATA } from '@/utils/constants';
 
-export default function DoctorInsight() {
-  const dynamics: TCard[] = [
-    {
-      to: '/doctor-insight/diabetes-dynamics',
-      title: 'Diabetes Dynamics',
-      description:
-        'The Diabetes Dynamics offers insight on Type 1 and Type 2 diabetes, specifically on doctors’ behaviors, motivations, unmet patient needs and other critical information to aid strategic planning, tactical execution and performance assessment.',
-      bg: '#BCA3C74D',
-      color: '#674775',
-    },
-    {
-      to: '/doctor-insight/hypertension-dynamics',
-      title: 'Hypertension Dynamics',
-      description:
-        'The Hypertension Dynamics enables exploration of the behaviors, preferences, and knowledge of doctors regarding patient numbers, unmet needs, and therapeutics in the management of hypertension.',
-      bg: '#5FAD564D',
-      color: '#3B6E35',
-    },
-    {
-      to: '/doctor-insight/oncology-dynamics',
-      title: 'Oncology Dynamics',
-      description:
-        'The Oncology Dynamics enables a deep dive analysis of behaviours, preferences, and knowledge of oncologists as it relates to cancer patient counts, unmet needs, and therapeutics in management of prostate and breast cancer.',
-      bg: '#FF95054D',
-      color: '#8F5200',
-    },
-  ];
-
-  const analyses: TCard[] = [
-    {
-      to: '/doctor-insight/competitive-landscape',
-      title: 'Competitive Landscape Analysis',
-      description:
-        'This analysis provides insight on doctors’ feedback regarding value added by company scientific engagement and sales representative visits. Insights from the analysis could be a useful metric for benchmarking your company’s scientific and salesforce engagement towards seeking areas of improvement whilst also assessing impact of investment in these activities.',
-      bg: '#CBEEF34D',
-      color: '#289DAE',
-    },
-    {
-      to: '/doctor-insight/digital-preference',
-      title: 'Digital Preference Analysis',
-      description:
-        'This analysis provides insight on openness of doctors to be engaged virtually and most preferred digital channel for engagement by companies. Insight from this analytics enables planning and execution of multi-channel engagement as use of mobile devices, internet penetration, and use of social media as source of disease and therapeutic information evolves within the industry.',
-      bg: '#E7DDDD4D',
-      color: '#986D6D',
-    },
-  ];
+export default function () {
+  const { dynamics, analyses } = DOCTOR_INSIGHT_DATA;
 
   return (
     <>
@@ -78,7 +34,7 @@ export default function DoctorInsight() {
       </div>
 
       <div className="grid grid-cols-3 mb-7">
-        {dynamics.map(({ to, title, description, bg, color }) => (
+        {Object.values(dynamics).map(({ to, title, description, bg, color }) => (
           <Card key={to} className="mr-5 mb-5" style={{ background: bg }}>
             <h3 className="mb-5" style={{ color }}>
               {title}
@@ -96,7 +52,7 @@ export default function DoctorInsight() {
       </div>
 
       <div className="grid grid-cols-3 mb-12">
-        {analyses.map(({ to, title, description, bg, color }) => (
+        {Object.values(analyses).map(({ to, title, description, bg, color }) => (
           <Card key={to} className="mr-5 mb-5" style={{ background: bg }}>
             <h3 className="mb-5" style={{ color }}>
               {title}
