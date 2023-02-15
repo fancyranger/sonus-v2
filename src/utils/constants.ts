@@ -1,5 +1,23 @@
 import type { Cards } from '@/utils/interfaces';
 
+export const ROUTES = [
+  {
+    to: '/',
+    label: 'Dashboard',
+    icon: '/dashboard.svg',
+  },
+  {
+    to: '/doctor-insight',
+    label: 'Doctor Insight',
+    icon: '/doctor.svg',
+  },
+  {
+    to: '/pharmacist-insight',
+    label: 'Pharmacist Insight',
+    icon: '/pharmacist.svg',
+  },
+];
+
 export const DOCTOR_INSIGHT_DATA = {
   dynamics: {
     'diabetes-dynamics': {
