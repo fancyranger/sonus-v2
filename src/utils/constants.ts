@@ -118,13 +118,13 @@ export const DOCTOR_INSIGHT_DATA = {
           bg: '#5FAD564D',
           color: '#3B6E35',
         },
-        'unmet-treatment-objectives': {
-          to: '/doctor-insight/oncology-dynamics/unmet-treatment-objectives',
-          title: 'Unmet Treatment Objectives',
+        'brand-preference-and-recall': {
+          to: '/doctor-insight/oncology-dynamics/brand-preference-and-recall',
+          title: 'Brand Preference and Recall',
           description:
-            'This analysis provides insight on unmet treatment objectives for patients with type 1 and type 2 diabetes as treated with oral antidiabetics and insulins.',
-          bg: '#CBEEF34D',
-          color: '#289DAE',
+            'This analysis provides insight on brand top-of-mind audit and brand preference for both oral antidiabetics and insulins for treatment of type 2 and type 1 diabetes respectively.',
+          bg: '#FF95054D',
+          color: '#995800',
         },
         'barriers-to-treatment': {
           to: '/doctor-insight/oncology-dynamics/barriers-to-treatment',
