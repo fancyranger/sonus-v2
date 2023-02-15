@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function BrandPreferenceRecall() {
+export default function () {
   return (
     <>
       <Head>
