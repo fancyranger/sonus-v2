@@ -4,6 +4,8 @@ import Card from '@/components/Card';
 import { DOCTOR_INSIGHT_DATA } from '@/utils/constants';
 
 export default function () {
+  const cards = DOCTOR_INSIGHT_DATA.dynamics['diabetes-dynamics'].data;
+
   return (
     <>
       <Head>
@@ -23,17 +25,15 @@ export default function () {
       </div>
 
       <div className="grid grid-cols-3 mb-7">
-        {Object.values(DOCTOR_INSIGHT_DATA.dynamics['diabetes-dynamics'].data).map(
-          ({ to, title, description, bg, color }) => (
-            <Card key={to} className="mr-5 mb-5" style={{ background: bg }}>
-              <h3 className="mb-5" style={{ color }}>
-                {title}
-              </h3>
-              <p className="mb-2">{description}</p>
-              <Link href={to}>View more</Link>
-            </Card>
-          ),
-        )}
+        {Object.values(cards ?? []).map(({ to, title, description, bg, color }) => (
+          <Card key={to} className="mr-5 mb-5" style={{ background: bg }}>
+            <h3 className="mb-5" style={{ color }}>
+              {title}
+            </h3>
+            <p className="mb-2">{description}</p>
+            <Link href={to}>View more</Link>
+          </Card>
+        ))}
       </div>
     </>
   );
