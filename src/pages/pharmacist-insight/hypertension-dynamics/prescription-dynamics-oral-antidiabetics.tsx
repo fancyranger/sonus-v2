@@ -10,7 +10,9 @@ export default function () {
       <div className="grid grid-cols-3">
         <div className="col-span-2">
           <div className="content-header mb-7">
-            <h1 className="mb-7">Pharmacist Insight - Diabetes Dynamics - Barrier to Access</h1>
+            <h1 className="mb-7">
+              Pharmacist Insight - Hypertension Dynamics - Prescription Dynamics (Oral Antidiabetics)
+            </h1>
 
             <div>
               This analysis provides insight on number of patients encountered, newly diagnosed patients, number of

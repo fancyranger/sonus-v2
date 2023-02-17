@@ -4,22 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply text-cyan-blue-dark;
-  background-color: #d8d6d6;
-  font-family: arial;
-}
-
-aside {
-  background: linear-gradient(179.33deg, #00b4db -23.61%, #13768b 60.72%);
-}
-
 @layer base {
+  body {
+    @apply text-cyan-blue-dark font-arial bg-[#d8d6d6];
+  }
+
+  aside {
+    background: linear-gradient(179.33deg, #00b4db -23.61%, #13768b 60.72%);
+  }
+
   h1 {
     @apply text-primary font-bold text-2xl;
   }
 
-  a {
+  a,
+  button {
     @apply px-5 py-2.5 text-white bg-primary font-bold rounded-lg;
   }
 }
@@ -36,6 +35,8 @@ aside {
   }
 
   .card {
+    @apply flex flex-col px-7 py-5 rounded-lg;
+
     h3 {
       @apply text-lg font-bold;
     }
