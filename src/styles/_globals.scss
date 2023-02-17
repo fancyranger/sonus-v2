@@ -25,15 +25,27 @@ aside {
 }
 
 @layer components {
-  .card > h3 {
-    @apply text-lg font-bold;
+  .content-header {
+    p {
+      @apply text-cyan-blue-medium font-bold;
+    }
+
+    div {
+      @apply px-4 py-3 bg-white rounded-lg;
+    }
   }
 
-  .card > p {
-    @apply grow;
-  }
+  .card {
+    h3 {
+      @apply text-lg font-bold;
+    }
 
-  .card > a {
-    @apply place-self-end;
+    p {
+      @apply grow;
+    }
+
+    a {
+      @apply place-self-end;
+    }
   }
 }

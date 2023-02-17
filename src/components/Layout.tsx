@@ -6,7 +6,7 @@ export default function Layout({ children }: { children: JSX.Element }) {
     <div className="flex">
       <Sidebar />
 
-      <main className="grow h-screen px-12 overflow-x-hidden overflow-y-auto">
+      <main className="container grow h-screen px-12 mx-auto overflow-x-hidden overflow-y-auto">
         <Header />
 
         <div className="py-2.5">{children}</div>
