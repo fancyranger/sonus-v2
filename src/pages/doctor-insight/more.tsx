@@ -21,13 +21,13 @@ export default function () {
             </p>
 
             <div>
-              The SONUS™ Doctor Insight platform curates data from interviews of doctors following administration of
-              medical and commercially critical questions that unveil opportunities in hospitals, as seen from doctors’
-              behaviours when treating patients with diabetes, hypertension, or cancer. The scope include diagnosed
-              patient counts, criteria for brand selection, unmet needs, brand preference and recall, barriers to
-              treatment, preferred digital channels, assessment of value of company field force and scientific
-              engagement. SONUS™ survey is conducted annually. The first syndicated research was completed November
-              2021. 2021.
+              The SONUS<sup>TM</sup> Doctor Insight platform curates data from interviews of doctors following
+              administration of medical and commercially critical questions that unveil opportunities in hospitals, as
+              seen from doctors’ behaviours when treating patients with diabetes, hypertension, or cancer. The scope
+              include diagnosed patient counts, criteria for brand selection, unmet needs, brand preference and recall,
+              barriers to treatment, preferred digital channels, assessment of value of company field force and
+              scientific engagement. SONUS<sup>TM</sup> survey is conducted annually. The first syndicated research was
+              completed November 2021. 2021.
             </div>
           </div>
         </div>
