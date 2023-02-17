@@ -12,15 +12,17 @@ export default function () {
         <title>SONUS Doctor Insight</title>
       </Head>
 
-      <h1 className="mb-7">Doctor Insight - Diabetes Dynamics</h1>
+      <div className="grid grid-cols-3">
+        <div className="col-span-2">
+          <div className="content-header mb-7">
+            <h1 className="mb-7">Doctor Insight - Diabetes Dynamics</h1>
 
-      <div className="grid grid-cols-3 mb-10">
-        <div className="col-span-2 px-4 py-3 bg-white rounded-lg">
-          <p>
-            The Diabetes Dynamics offers insight on Type 1 and Type 2 diabetes, specifically on doctor’s behaviors,
-            motivations, unmet patient needs and other critical informationto aid strategic plaaning, tactical
-            exxecution and performance assessment.
-          </p>
+            <div>
+              The Diabetes Dynamics offers insight on Type 1 and Type 2 diabetes, specifically on doctor’s behaviors,
+              motivations, unmet patient needs and other critical informationto aid strategic plaaning, tactical
+              exxecution and performance assessment.
+            </div>
+          </div>
         </div>
       </div>
 
