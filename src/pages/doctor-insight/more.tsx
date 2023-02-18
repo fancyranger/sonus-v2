@@ -33,9 +33,9 @@ export default function () {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 mb-7">
+      <div className="grid grid-cols-3 gap-5 mb-7">
         {Object.values(DOCTOR_INSIGHT_DATA.more).map(({ to, title, description, bg, color }) => (
-          <div key={to} className="card mr-5 mb-5" style={{ background: bg }}>
+          <div key={to} className="card" style={{ background: bg }}>
             <h3 className="mb-5" style={{ color }}>
               {title}
             </h3>

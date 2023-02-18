@@ -25,6 +25,8 @@
 
 @layer components {
   .content-header {
+    @apply flex flex-col;
+
     p {
       @apply text-cyan-blue-medium font-bold;
     }

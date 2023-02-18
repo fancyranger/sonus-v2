@@ -35,9 +35,9 @@ export default function () {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 mb-7">
+      <div className="grid grid-cols-3 gap-5 mb-7">
         {Object.values(dynamics).map(({ to, title, description, bg, color }) => (
-          <div key={to} className="card mr-5 mb-5" style={{ background: bg }}>
+          <div key={to} className="card" style={{ background: bg }}>
             <h3 className="mb-5" style={{ color }}>
               {title}
             </h3>
@@ -53,9 +53,9 @@ export default function () {
         </Link>
       </div>
 
-      <div className="grid grid-cols-3 mb-12">
+      <div className="grid grid-cols-3 gap-5">
         {Object.values(analyses).map(({ to, title, description, bg, color }) => (
-          <div key={to} className="card mr-5 mb-5" style={{ background: bg }}>
+          <div key={to} className="card" style={{ background: bg }}>
             <h3 className="mb-5" style={{ color }}>
               {title}
             </h3>
