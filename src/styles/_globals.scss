@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply text-cyan-blue-dark font-arial bg-[#d8d6d6];
+    @apply bg-[url('/back.png')] bg-[#d8d6d6] bg-no-repeat bg-cover text-cyan-blue-dark font-arial;
   }
 
   aside {
@@ -14,12 +14,16 @@
   }
 
   h1 {
-    @apply text-primary font-bold text-2xl;
+    @apply text-primary font-bold text-2xl leading-7;
+  }
+
+  h3 {
+    @apply leading-[18px] font-bold;
   }
 
   a,
   button {
-    @apply px-5 py-2.5 text-white bg-primary font-bold rounded-lg;
+    @apply px-5 py-2.5 text-white bg-primary font-bold leading-[22px] rounded-lg;
   }
 }
 
@@ -28,7 +32,7 @@
     @apply flex flex-col;
 
     p {
-      @apply text-cyan-blue-medium font-bold;
+      @apply text-cyan-blue-medium font-bold leading-[18px];
     }
 
     div {
@@ -40,7 +44,7 @@
     @apply flex flex-col px-7 py-5 rounded-lg;
 
     h3 {
-      @apply text-lg font-bold;
+      @apply text-lg leading-[24px];
     }
 
     p {

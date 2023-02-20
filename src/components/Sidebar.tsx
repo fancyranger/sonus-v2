@@ -16,16 +16,16 @@ export default function Sidebar() {
 
   return (
     <aside className="flex flex-col shrink-0 w-60 h-screen py-8">
-      <h1 className="mx-auto mb-8 text-white">
+      <div className="mx-auto mb-8 text-white text-[28px] leading-8">
         SONUS<sup>TM</sup>
-      </h1>
+      </div>
 
       <ul className="mb-40">
         {ROUTES.map(({ to, label, icon }) => (
           <li key={to} className="flex mb-2">
             <RouteLink to={to} style={{ background: router.asPath === to ? '#56BDD3' : null }}>
               <Image className="mr-2" src={icon} alt="dashboard" width="24" height="24" />
-              <span>{label}</span>
+              <span className="leading-[18px]">{label}</span>
             </RouteLink>
           </li>
         ))}
@@ -40,7 +40,7 @@ export default function Sidebar() {
           <li className="flex items-center">
             <RouteLink to="/support">
               <Image className="mr-2" src="/support.svg" alt="support" width="24" height="24" />
-              <span>Support</span>
+              <span className="leading-[18px]">Support</span>
             </RouteLink>
           </li>
         )}
@@ -48,7 +48,7 @@ export default function Sidebar() {
         <li className="flex items-center">
           <RouteLink to="/auth/logout" onClick={handleLogout}>
             <Image className="mr-2" src="/logout.svg" alt="logout" width="24" height="24" />
-            <span>Logout</span>
+            <span className="leading-[18px]">Logout</span>
           </RouteLink>
         </li>
       </ul>

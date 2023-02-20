@@ -18,6 +18,8 @@ export const ROUTES = [
   },
 ];
 
+export const THERAPY_AREAS = ['Oncology', 'Hypertension', 'Diabetes', 'Respiratory', 'Anti-infectives', 'Vitamins'];
+
 export const DOCTOR_INSIGHT_DATA = {
   dynamics: {
     'diabetes-dynamics': {

@@ -48,7 +48,7 @@ export default function () {
       </div>
 
       <div className="flex mb-12">
-        <Link href="/doctor-insight/more" className="bg-[#96C9D3]">
+        <Link href="/doctor-insight/more" className="bg-[#96C9D3] text-lg leading-6">
           Explore other Therapy area
         </Link>
       </div>
