@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="flex items-center py-7">
       <div className="flex items-center grow px-5 py-2 ml-16 mr-10 bg-white rounded-lg">
-        <Image src="/search.svg" className="mr-3 text-primary" width="18" height="18" alt="search" />
+        <Image src="/header/search.svg" className="mr-3 text-primary" width="18" height="18" alt="search" />
         <input
           type="text"
           name="search"
@@ -15,7 +15,7 @@ export default function Header() {
 
       <div className="flex items-center mr-16 text-sm">
         <label>
-          <Image src="/lang.svg" width="18" height="18" alt="lang" />
+          <Image src="/header/lang.svg" width="18" height="18" alt="lang" />
         </label>
 
         <select className="bg-transparent font-poppins outline-0">
@@ -26,7 +26,7 @@ export default function Header() {
 
       <div className="flex flex-col items-end font-poppins">
         <div className="flex items-center">
-          <Image src="/profile.svg" className="mr-2 text-primary" width="24" height="24" alt="profile" />
+          <Image src="/header/profile.svg" className="mr-2 text-primary" width="24" height="24" alt="profile" />
           <span className="font-medium">Good Morning</span>
         </div>
 

@@ -18,7 +18,56 @@ export const ROUTES = [
   },
 ];
 
-export const THERAPY_AREAS = ['Oncology', 'Hypertension', 'Diabetes', 'Respiratory', 'Anti-infectives', 'Vitamins'];
+export const THERAPY_AREAS = [
+  {
+    to: '/oncology',
+    label: 'Oncology',
+    icon: '/therapy/oncology.svg',
+  },
+  {
+    to: '/hypertension',
+    label: 'Hypertension',
+    icon: '/therapy/hypertension.svg',
+  },
+  {
+    to: '/diabetes',
+    label: 'Diabetes',
+    icon: '/therapy/diabetes.svg',
+  },
+  {
+    to: '/respiratory',
+    label: 'Respiratory',
+    icon: '/therapy/respiratory.svg',
+  },
+  {
+    to: '/anti-infectives',
+    label: 'Anti-infectives',
+    icon: '/therapy/anti-infectives.svg',
+  },
+  {
+    to: '/vitamins',
+    label: 'Vitamins',
+    icon: '/therapy/vitamins.svg',
+  },
+];
+
+export const REFERENCE_MAP = [
+  {
+    title: 'Digital Preference',
+    description: 'Preferred channel of engagement by companies',
+    icon: '/reference/digital-preference.svg',
+  },
+  {
+    title: 'Salesforce Assessment',
+    description: 'Ranking of companies by value added by sales representatives',
+    icon: '/reference/salesforce-assessment.svg',
+  },
+  {
+    title: 'Ranking: Most Engaging Companies',
+    description: "Respondents' ranking of companies by value of scientific and pharmacy engagement",
+    icon: '/reference/most-engaging-companies.svg',
+  },
+];
 
 export const DOCTOR_INSIGHT_DATA = {
   dynamics: {
