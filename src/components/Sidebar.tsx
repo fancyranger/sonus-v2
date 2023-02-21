@@ -53,7 +53,7 @@ export default function Sidebar() {
         </li>
       </ul>
 
-      <div className="w-fit px-7 py-4 mx-auto mt-auto bg-white">
+      <div className="w-fit px-7 py-4 mx-auto mt-auto">
         <Image src="/pbr.svg" alt="pbr" width="100" height="45" />
       </div>
     </aside>
