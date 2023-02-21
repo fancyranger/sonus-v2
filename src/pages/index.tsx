@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { THERAPY_AREAS } from '@/utils/constants';
+import { THERAPY_AREAS, REFERENCE_MAP } from '@/utils/constants';
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
 
       <p className="mb-7 text-primary font-bold">Hi Mr. Ayodeji Alaran!</p>
 
-      <div className="grid grid-cols-3 gap-x-10">
+      <div className="grid grid-cols-3 gap-x-10 mb-28">
         <div className="col-span-2">
           <div className="content-header mb-7">
             <h1 className="mb-7">
@@ -49,65 +49,54 @@ export default function Home() {
               Pharmacists
             </div>
           </div>
-
-          <div className="flex flex-col mb-7">
-            <h3 className="mb-3 text-[#036D66]">Distribution of Respondents</h3>
-
-            <div className="px-5 py-8 bg-[#CBEEF34D] text-xs">
-              In a highly competitive market in which companies are looking for the next lever for growth, SONUS ™ offer
-              unprecedented insight for brand repositioning, performance assessment, new product opportunity, assessment
-              of marketing impact, and field force effectiveness.
-              <br />
-              <br />
-              SONUS™ survey is conducted annually first syndicated research completed November 2021.
-            </div>
-          </div>
-
-          <div className="grid grid-cols-3 gap-5 mb-32">
-            <h3 className="self-center text-primary">Digital Preference</h3>
-            <h3 className="self-center text-primary">Salesforce Assessment</h3>
-            <h3 className="self-center text-primary">Ranking: Most Engaging Companies</h3>
-
-            <div className="flex">
-              <div className="shrink-0 w-16 h-16 mr-3 bg-white rounded-lg"></div>
-              <p className="text-black text-sm leading-6">Preferred channel of engagement by companies</p>
-            </div>
-            <div className="flex">
-              <div className="shrink-0 w-16 h-16 mr-3 bg-white rounded-lg"></div>
-              <p className="text-black text-sm leading-6">
-                Ranking of companies by value added by sales representatives
-              </p>
-            </div>
-            <div className="flex">
-              <div className="shrink-0 w-16 h-16 mr-3 bg-white rounded-lg"></div>
-              <p className="text-black text-sm leading-6">
-                Respondents&apos; ranking of companies by value of scientific and pharmacy engagement
-              </p>
-            </div>
-          </div>
         </div>
 
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col">
           <div className="py-6 px-5 mb-16 bg-[#E7DDDD4D] rounded-lg">
             <h3 className="mb-4 text-[#986D6D]">Facility Class</h3>
             <p className="text-xs">Government Teaching Hospitals, General Hospitals, Private Hospitals</p>
           </div>
 
-          <div className="py-6 px-5 mb-32 bg-[#C9BCBC4D] rounded-lg">
+          <div className="py-6 px-5 bg-[#C9BCBC4D] rounded-lg">
             <h3 className="mb-4 text-[#5F7377]">Therapy Areas</h3>
             <div className="grid grid-cols-3 gap-7">
               {THERAPY_AREAS.map((item) => (
                 <div
-                  key={item}
+                  key={item.to}
                   className="flex flex-col items-center justify-center w-[70px] h-[70px] bg-[#E3E4E5] rounded-lg"
                 >
-                  <div className="shrink-0 w-7 h-7 bg-[#C7C7C7] rounded-md"></div>
-                  <span className="text-[10px] leading-6 text-center">{item}</span>
+                  <div className="shrink-0 flex items-center justify-center w-7 h-7 bg-[#C7C7C7] rounded-md">
+                    <Image src={item.icon} alt={item.label} width="18" height="18" />
+                  </div>
+                  <span className="text-[10px] leading-6 text-center">{item.label}</span>
                 </div>
               ))}
             </div>
           </div>
+        </div>
+      </div>
 
+      <div className="grid grid-cols-3 gap-x-10">
+        <div className="col-span-2">
+          <div className="grid grid-cols-3 gap-5 mb-32">
+            {REFERENCE_MAP.map((item) => (
+              <h3 key={item.title} className="self-center text-primary">
+                {item.title}
+              </h3>
+            ))}
+
+            {REFERENCE_MAP.map((item) => (
+              <div key={item.title} className="flex">
+                <div className="shrink-0 w-16 h-16 mr-3 bg-white rounded-lg">
+                  <Image src={item.icon} alt={item.title} width="64" height="64" />
+                </div>
+                <p className="text-black text-sm leading-6">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col items-end">
           <a href="/support" className="flex items-center py-4 bg-[#0D8BA6]">
             <Image src="/support.svg" className="mr-4" alt="support" width="24" height="24" />
             <span className="mr-20 leading-[18px]">Support</span>
