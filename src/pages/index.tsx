@@ -66,15 +66,16 @@ export default function Dashboard() {
             <h3 className="mb-4 text-[#5F7377]">Therapy Areas</h3>
             <div className="grid grid-cols-3 gap-6">
               {THERAPY_AREAS.map((item) => (
-                <div
+                <Link
                   key={item.to}
-                  className="flex flex-col items-center justify-center w-[70px] h-[70px] bg-[#E3E4E5] rounded-[10px]"
+                  href={item.to}
+                  className="flex flex-col items-center w-[70px] h-[70px] p-0 bg-[#E3E4E5] text-cyan-blue-dark font-normal rounded-[10px]"
                 >
-                  <figure className="shrink-0 flex items-center justify-center w-7 h-7 bg-[#C7C7C7] rounded-md">
+                  <figure className="shrink-0 flex items-center justify-center w-7 h-7 mt-4 bg-[#C7C7C7] rounded-md">
                     <Image src={item.icon} alt={item.label} width="18" height="18" />
                   </figure>
                   <span className="text-[10px] leading-6 text-center">{item.label}</span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
