@@ -6,24 +6,28 @@
 
 @layer base {
   body {
-    @apply bg-[url('/back.png')] bg-[#d8d6d6] bg-no-repeat bg-cover text-cyan-blue-dark font-arial;
+    @apply bg-[url('/back.png')] bg-[#D8D7D7] bg-no-repeat bg-cover text-cyan-blue-dark font-arial;
   }
 
-  aside {
+  nav {
     background: linear-gradient(179.33deg, #00b4db -23.61%, #13768b 60.72%);
   }
 
   h1 {
-    @apply text-primary font-bold text-2xl leading-7;
+    @apply text-primary text-2xl leading-7 font-bold;
+  }
+
+  h2 {
+    @apply text-primary text-xl leading-6 font-bold;
   }
 
   h3 {
-    @apply leading-[18px] font-bold;
+    @apply text-primary leading-[18px] font-bold;
   }
 
   a,
   button {
-    @apply px-5 py-2.5 text-white bg-primary font-bold leading-[22px] rounded-lg;
+    @apply px-5 py-2.5 bg-primary text-white font-bold rounded-[10px];
   }
 }
 
@@ -32,19 +36,31 @@
     @apply flex flex-col;
 
     p {
-      @apply text-cyan-blue-medium font-bold leading-[18px];
+      @apply text-cyan-blue-medium font-bold;
     }
 
     div {
-      @apply px-4 py-3 bg-white rounded-lg;
+      @apply px-6 py-5 bg-white rounded-[10px];
+    }
+  }
+
+  .route-link {
+    @apply flex items-center w-full pl-7 py-3 mr-4 bg-transparent rounded-l-none rounded-r-[10px] hover:bg-[#56BDD3];
+  }
+
+  .dashboard-card {
+    @apply min-h-[100px] p-4 rounded-[10px];
+
+    p {
+      @apply grow text-xs;
     }
   }
 
   .card {
-    @apply flex flex-col px-7 py-5 rounded-lg;
+    @apply flex flex-col min-h-[280px] p-5 rounded-[10px];
 
     h3 {
-      @apply text-lg leading-[24px];
+      @apply text-lg leading-6;
     }
 
     p {
@@ -52,7 +68,7 @@
     }
 
     a {
-      @apply place-self-end;
+      @apply w-fit place-self-end;
     }
   }
 }

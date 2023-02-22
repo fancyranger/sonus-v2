@@ -3,8 +3,8 @@ import Image from 'next/image';
 export default function Header() {
   return (
     <header className="flex items-center py-7">
-      <div className="flex items-center grow px-5 py-2 ml-16 mr-10 bg-white rounded-lg">
-        <Image src="/header/search.svg" className="mr-3 text-primary" width="18" height="18" alt="search" />
+      <div className="flex items-center grow px-5 py-2 ml-16 mr-10 bg-white rounded-[10px]">
+        <Image className="mr-3" src="/header/search.svg" width="18" height="18" alt="search" />
         <input
           type="text"
           name="search"
@@ -26,7 +26,7 @@ export default function Header() {
 
       <div className="flex flex-col items-end font-poppins">
         <div className="flex items-center">
-          <Image src="/header/profile.svg" className="mr-2 text-primary" width="24" height="24" alt="profile" />
+          <Image className="mr-2 text-primary" src="/header/profile.svg" width="24" height="24" alt="profile" />
           <span className="font-medium">Good Morning</span>
         </div>
 
