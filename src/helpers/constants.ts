@@ -165,7 +165,77 @@ export const APP_DATA = {
         span: 2,
         bg: '#5FAD564D',
         color: '#3B6E35',
-        data: {},
+        header: {
+          title: 'Diabetes Dynamics - Pharmacist Insight',
+        },
+        data: {
+          'pharmacist-insight': {
+            to: '/diabetes/pharmacist/pharmacist-insight',
+            title: 'Pharmacist Insight',
+            description:
+              'This analysis provides insight on factors driving stocking of oral antidiabetics and insulins, and factors that motivates pharmacists to stock the two classes of drugs.',
+            bg: '#BCA3C7',
+            color: '#674775',
+          },
+          'prescription-dynamics-insulin': {
+            to: '/diabetes/pharmacist/prescription-dynamics-insulin',
+            title: 'Prescription Dynamics (Insulin)',
+            description:
+              'This analysis provides insight on product prescription and demand trends for oral antidiabetics and insulins including volume of prescriptions, prescription refills, pack purchase analytics, most prescribed molecules, most prescribed brands, doctors’ prescription by brand and generics, and impact of doctors prescription.',
+            bg: '#5FAD564D',
+            color: '#3B6E35',
+          },
+          'prescription-dynamics-oral-antidiabetics': {
+            to: '/diabetes/pharmacist/prescription-dynamics-oral-antidiabetics',
+            title: 'Prescription Dynamics (Oral Antidiabetics)',
+            description:
+              'This analysis provides insight on product prescription and demand trends for oral antidiabetics and insulins including volume of prescriptions, prescription refills, pack purchase analytics, most prescribed molecules, most prescribed brands, doctors’ prescription by brand and generics, and impact of doctors prescription.',
+            bg: '#FF95054D',
+            color: '#995800',
+          },
+          'switch-analytics': {
+            to: '/diabetes/pharmacist/switch-analytics',
+            title: 'Switch Analytics',
+            description:
+              'This analysis provides insight on trend of oral antidiabetic brand switches by pharmacists in hospital and community pharmacies respectively, and also reason for the switch.',
+            bg: '#CBEEF34D',
+            color: '#289DAE',
+          },
+          'patient-insight': {
+            to: '/diabetes/pharmacist/patient-insight',
+            title: 'Patient Insight',
+            description:
+              'This analysis provides insight on patients’ loyalty and insistence on brands when prescribed oral antidiabetics.',
+            bg: '#E7DDDD',
+            color: '#986D6D',
+          },
+          'barriers-to-access': {
+            to: '/diabetes/pharmacist/barriers-to-access',
+            title: 'Barriers to Access',
+            description:
+              'This analysis provides insight on barriers of patients to accessing insulins and oral antidiabetic products when prescribed by doctors in both hospitals and community pharmacies respectively.',
+            bg: '#048A814D',
+            color: '#036D66',
+          },
+        },
+        analyses: {
+          'competitive-landscape-analysis': {
+            to: '/diabetes/pharmacist/competitive-landscape-analysis',
+            title: 'Competitive Landscape Analysis',
+            description:
+              'This analysis provides insight on pharmacists’ feedback on companies with the most value-adding field force and scientific engagement.',
+            bg: '#048A8138',
+            color: '#036D66',
+          },
+          'digital-preference-analysis': {
+            to: '/diabetes/pharmacist/digital-preference-analysis',
+            title: 'Digital Preference Analysis',
+            description:
+              'This analysis provides insight on openness of pharmacists’ to be engaged virtually and most preferred digital channel for engagement by companies.',
+            bg: '#DDAEA4',
+            color: '#834646',
+          },
+        },
       },
     },
   },
