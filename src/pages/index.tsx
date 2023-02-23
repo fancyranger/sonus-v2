@@ -1,9 +1,16 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Icon from '@/components/Icon';
-import { THERAPY_AREAS, REFERENCE_MAP } from '@/utils/constants';
+import ContentHeader from '@/components/ContentHeader';
+import { APP_DATA } from '@/helpers/constants';
 
 export default function Dashboard() {
+  const {
+    header: { title, sub, description },
+    therapies,
+    references,
+  } = APP_DATA;
+
   return (
     <>
       <Head>
@@ -14,20 +21,7 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-3 gap-x-10 mb-28">
         <div className="col-span-2">
-          <div className="content-header">
-            <h1>
-              Welcome to SONUS<sup>TM</sup>
-            </h1>
-
-            <p>
-              Helping you uncover new opportunities from insight on doctors and pharmacists knowledge and behaviours.
-            </p>
-
-            <div>
-              SONUS<sup>TM</sup> provides access to unprecedented data and insight captured from face-to-face interview
-              of doctors and pharmacists in major disease diagnosis, treatment, and dispensing centres in the country.
-            </div>
-          </div>
+          <ContentHeader title={title} sub={sub} description={description} />
 
           <div className="grid grid-cols-3 gap-x-8 gap-y-3">
             <h3 className="self-center text-[#674775]">Respondents interviewed</h3>
@@ -65,7 +59,7 @@ export default function Dashboard() {
           <div className="dashboard-card py-6 bg-[#C9BCBC]">
             <h3 className="text-[#5F7377]">Therapy Areas</h3>
             <div className="grid grid-cols-3 gap-4">
-              {THERAPY_AREAS.map(({ to, icon, label }) => (
+              {therapies.map(({ to, icon, label }) => (
                 <Link key={to} href={to} className="therapy">
                   <div>
                     <Icon>{icon}</Icon>
@@ -81,13 +75,13 @@ export default function Dashboard() {
       <div className="grid grid-cols-3 gap-x-10 mb-30">
         <div className="col-span-2">
           <div className="grid grid-cols-3 gap-5">
-            {REFERENCE_MAP.map(({ title }) => (
+            {references.map(({ title }) => (
               <h3 key={title} className="self-center">
                 {title}
               </h3>
             ))}
 
-            {REFERENCE_MAP.map(({ title, icon, description }) => (
+            {references.map(({ title, icon, description }) => (
               <div key={title} className="reference">
                 <div>
                   <Icon>{icon}</Icon>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Icon from '@/components/Icon';
-import { ROUTES } from '@/utils/constants';
+import { ROUTES } from '@/helpers/constants';
 
 export default function Sidebar() {
   const router = useRouter();
@@ -14,7 +14,7 @@ export default function Sidebar() {
   return (
     <nav className="shrink-0 flex flex-col w-60 h-screen py-8">
       <Link href="/" className="mx-auto mb-8 p-0 bg-transparent text-[28px] leading-8">
-        SONUS<sup>TM</sup>
+        SONUS™
       </Link>
 
       <ul className="mb-40">

@@ -68,8 +68,20 @@ export const REFERENCE_MAP = [
 ];
 
 export const APP_DATA = {
+  to: '/',
+  header: {
+    title: 'Welcome to SONUS™',
+    sub: 'Helping you uncover new opportunities from insight on doctors and pharmacists knowledge and behaviours.',
+    description:
+      'SONUS™ provides access to unprecedented data and insight captured from face-to-face interview of doctors and pharmacists in major disease diagnosis, treatment, and dispensing centres in the country.',
+  },
   diabetes: {
     to: '/diabetes',
+    header: {
+      title: 'Diabetes Dynamics Therapy Area Insight',
+      description:
+        'The Diabetes Dynamics offers insight on Type 1 and Type 2 diabetes, specifically on doctor’s behaviors, motivations, unmet patient needs and other critical informationto aid strategic plaaning, tactical exxecution and performance assessment.',
+    },
     data: {
       doctor: {
         to: '/diabetes/doctor',
@@ -80,6 +92,9 @@ export const APP_DATA = {
         span: 1,
         bg: '#BCA3C74D',
         color: '#674775',
+        header: {
+          title: 'Diabetes Dynamics - Doctor Insight',
+        },
         data: {
           'patient-opportunity-analysis': {
             to: '/diabetes/doctor/patient-opportunity-analysis',
@@ -154,4 +169,53 @@ export const APP_DATA = {
       },
     },
   },
+  therapies: [
+    {
+      to: '/oncology',
+      label: 'Oncology',
+      icon: 'oncology',
+    },
+    {
+      to: '/hypertension',
+      label: 'Hypertension',
+      icon: 'hypertension',
+    },
+    {
+      to: '/diabetes',
+      label: 'Diabetes',
+      icon: 'diabetes',
+    },
+    {
+      to: '/respiratory',
+      label: 'Respiratory',
+      icon: 'respiratory',
+    },
+    {
+      to: '/anti-infectives',
+      label: 'Anti-infectives',
+      icon: 'anti-infectives',
+    },
+    {
+      to: '/vitamins',
+      label: 'Vitamins',
+      icon: 'vitamins',
+    },
+  ],
+  references: [
+    {
+      title: 'Digital Preference',
+      description: 'Preferred channel of engagement by companies',
+      icon: 'digital',
+    },
+    {
+      title: 'Salesforce Assessment',
+      description: 'Ranking of companies by value added by sales representatives',
+      icon: 'salesforce',
+    },
+    {
+      title: 'Ranking: Most Engaging Companies',
+      description: "Respondents' ranking of companies by value of scientific and pharmacy engagement",
+      icon: 'ranking',
+    },
+  ],
 };
