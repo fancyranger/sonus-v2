@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import Icon from '@/components/Icon';
 import { THERAPY_AREAS, REFERENCE_MAP } from '@/utils/constants';
 
 export default function Dashboard() {
@@ -15,11 +16,11 @@ export default function Dashboard() {
       <div className="grid grid-cols-3 gap-x-10 mb-28">
         <div className="col-span-2">
           <div className="content-header mb-7">
-            <h1 className="mb-4">
+            <h1 className="mb-7">
               Welcome to SONUS<sup>TM</sup>
             </h1>
 
-            <p className="mb-0.5">
+            <p className="mb-7">
               Helping you uncover new opportunities from insight on doctors and pharmacists knowledge and behaviours.
             </p>
 
@@ -29,13 +30,13 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-x-5 gap-y-3">
+          <div className="grid grid-cols-3 gap-x-8 gap-y-3">
             <h3 className="self-center text-[#674775]">Respondents interviewed</h3>
             <h3 className="self-center text-[#3B6E35]">HCP’s Speacilty</h3>
             <h3 className="self-center text-[#8F5200]">HCP’s Cadre</h3>
 
-            <div className="dashboard-card flex items-start py-2 bg-[#8332AC4D]">
-              <Image className="mr-2" src="/respondent.svg" alt="respondent" width="40" height="40" />
+            <div className="dashboard-card flex items-start bg-[#8332AC4D]">
+              <Icon className="w-10 h-10 mr-2 text-[#111111CC]">doctor</Icon>
               <div className="flex flex-col">
                 <span className="font-bold text-[#111111CC] leading-[18px]">2,051</span>
                 <span>Doctors</span>
@@ -64,17 +65,13 @@ export default function Dashboard() {
 
           <div className="dashboard-card py-6 bg-[#C9BCBC]">
             <h3 className="mb-4 text-[#5F7377]">Therapy Areas</h3>
-            <div className="grid grid-cols-3 gap-6">
-              {THERAPY_AREAS.map((item) => (
-                <Link
-                  key={item.to}
-                  href={item.to}
-                  className="flex flex-col items-center w-[70px] h-[70px] p-0 bg-[#E3E4E5] text-cyan-blue-dark font-normal rounded-[10px]"
-                >
-                  <figure className="shrink-0 flex items-center justify-center w-7 h-7 mt-4 bg-[#C7C7C7] rounded-md">
-                    <Image src={item.icon} alt={item.label} width="18" height="18" />
-                  </figure>
-                  <span className="text-[10px] leading-6 text-center">{item.label}</span>
+            <div className="grid grid-cols-3 gap-4">
+              {THERAPY_AREAS.map(({ to, icon, label }) => (
+                <Link key={to} href={to} className="therapy">
+                  <div>
+                    <Icon>{icon}</Icon>
+                  </div>
+                  <span>{label}</span>
                 </Link>
               ))}
             </div>
@@ -85,28 +82,28 @@ export default function Dashboard() {
       <div className="grid grid-cols-3 gap-x-10 mb-32">
         <div className="col-span-2">
           <div className="grid grid-cols-3 gap-5">
-            {REFERENCE_MAP.map((item) => (
-              <h3 key={item.title} className="self-center">
-                {item.title}
+            {REFERENCE_MAP.map(({ title }) => (
+              <h3 key={title} className="self-center">
+                {title}
               </h3>
             ))}
 
-            {REFERENCE_MAP.map((item) => (
-              <div key={item.title} className="flex">
-                <figure className="shrink-0 flex items-center justify-center w-[70px] h-[70px] mr-3 bg-white rounded-[10px]">
-                  <Image src={item.icon} alt={item.title} width="64" height="64" />
-                </figure>
-                <p className="text-black text-sm leading-6">{item.description}</p>
+            {REFERENCE_MAP.map(({ title, icon, description }) => (
+              <div key={title} className="reference">
+                <div>
+                  <Icon>{icon}</Icon>
+                </div>
+                <p>{description}</p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="flex flex-col items-end">
-          <Link href="/support" className="flex items-center px-5 py-4 bg-[#0D8BA6]">
-            <Image className="mr-4" src="/support.svg" alt="support" width="24" height="24" />
-            <span className="mr-20 leading-[18px]">Support</span>
-            <Image src="/right.svg" alt="right" width="6" height="10" />
+          <Link href="/support" className="support">
+            <Icon className="mr-4">support</Icon>
+            <span className="mr-20">Support</span>
+            <Icon>right</Icon>
           </Link>
         </div>
       </div>

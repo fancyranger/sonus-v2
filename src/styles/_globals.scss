@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-[url('/back.png')] bg-[#D8D7D7] bg-no-repeat bg-cover text-cyan-blue-dark font-arial;
+    @apply bg-[url('/static/back.png')] bg-[#D8D7D7] bg-no-repeat bg-cover text-cyan-blue-dark font-arial;
   }
 
   nav {
@@ -40,12 +40,24 @@
     }
 
     div {
-      @apply px-6 py-5 bg-white rounded-[10px];
+      @apply px-6 py-5 bg-[#FFFFFFB2] rounded-[10px];
     }
   }
 
-  .route-link {
-    @apply flex items-center w-full pl-7 py-3 mr-4 bg-transparent rounded-l-none rounded-r-[10px] hover:bg-[#56BDD3];
+  .nav-link {
+    @apply flex mb-2;
+
+    a {
+      @apply flex items-center w-full pl-7 py-3 mr-4 bg-transparent rounded-l-none rounded-r-[10px] hover:bg-[#56BDD3];
+
+      svg {
+        @apply w-6 h-6 mr-2;
+      }
+
+      span {
+        @apply leading-[18px];
+      }
+    }
   }
 
   .dashboard-card {
@@ -53,6 +65,38 @@
 
     p {
       @apply grow text-xs;
+    }
+  }
+
+  .therapy {
+    @apply flex flex-col items-center w-[70px] h-[70px] p-0 bg-[#E3E4E5] text-cyan-blue-dark font-normal rounded-[10px];
+
+    div {
+      @apply shrink-0 flex items-center justify-center w-7 h-7 mt-4 bg-[#C7C7C7] rounded-md;
+    }
+
+    span {
+      @apply text-[10px] leading-6 text-center;
+    }
+  }
+
+  .support {
+    @apply flex items-center px-5 py-4 bg-[#0D8BA6] font-normal;
+
+    span {
+      @apply leading-[18px];
+    }
+  }
+
+  .reference {
+    @apply flex;
+
+    div {
+      @apply shrink-0 flex items-center justify-center w-[70px] h-[70px] mr-3 bg-white rounded-[10px];
+    }
+
+    p {
+      @apply text-black text-sm leading-6;
     }
   }
 

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import Icon from '@/components/Icon';
 import { ROUTES } from '@/utils/constants';
 
 export default function Sidebar() {
@@ -9,22 +10,20 @@ export default function Sidebar() {
 
   const handleLogout = (e: React.MouseEvent) => {
     e.preventDefault();
-
-    console.log('logout');
   };
 
   return (
     <nav className="shrink-0 flex flex-col w-60 h-screen py-8">
-      <div className="mx-auto mb-8 text-white text-[28px] leading-8 font-bold">
+      <Link href="/" className="mx-auto mb-8 p-0 bg-transparent text-[28px] leading-8">
         SONUS<sup>TM</sup>
-      </div>
+      </Link>
 
       <ul className="mb-40">
         {ROUTES.map(({ to, label, icon }) => (
-          <li key={to} className="flex mb-2">
-            <Link href={to} className="route-link" style={{ background: router.asPath === to ? '#56BDD3' : undefined }}>
-              <Image className="mr-2" src={icon} alt="dashboard" width="24" height="24" />
-              <span className="leading-[18px]">{label}</span>
+          <li key={to} className="nav-link">
+            <Link href={to} style={{ background: router.asPath === to ? '#56BDD3' : undefined }}>
+              <Icon>{icon}</Icon>
+              <span>{label}</span>
             </Link>
           </li>
         ))}
@@ -36,24 +35,24 @@ export default function Sidebar() {
 
       <ul className="mt-auto mb-30">
         {!isDashboard && (
-          <li className="flex items-center">
-            <Link href="/support" className="route-link">
-              <Image className="mr-2" src="/support.svg" alt="support" width="24" height="24" />
-              <span className="leading-[18px]">Support</span>
+          <li className="nav-link">
+            <Link href="/support">
+              <Icon>support</Icon>
+              <span>Support</span>
             </Link>
           </li>
         )}
 
-        <li className="flex items-center">
-          <Link href="/auth/logout" className="route-link" onClick={handleLogout}>
-            <Image className="mr-2" src="/logout.svg" alt="logout" width="24" height="24" />
-            <span className="leading-[18px]">Logout</span>
+        <li className="nav-link">
+          <Link href="/auth/logout" onClick={handleLogout}>
+            <Icon>logout</Icon>
+            <span>Logout</span>
           </Link>
         </li>
       </ul>
 
-      <div className="w-fit px-7 py-4 mx-auto mt-auto">
-        <Image src="/pbr.svg" alt="pbr" width="100" height="45" />
+      <div className="w-fit mx-auto mt-auto">
+        <Icon>pbr</Icon>
       </div>
     </nav>
   );

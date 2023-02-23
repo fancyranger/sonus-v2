@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import Icon from '@/components/Icon';
 
 export default function Header() {
   return (
     <header className="flex items-center py-7">
       <div className="flex items-center grow px-5 py-2 ml-16 mr-10 bg-white rounded-[10px]">
-        <Image className="mr-3" src="/header/search.svg" width="18" height="18" alt="search" />
+        <Icon className="mr-3">search</Icon>
         <input
           type="text"
           name="search"
@@ -13,25 +14,21 @@ export default function Header() {
         />
       </div>
 
-      <div className="flex items-center mr-16 text-sm">
-        <label>
-          <Image src="/header/lang.svg" width="18" height="18" alt="lang" />
-        </label>
-
-        <select className="bg-transparent font-poppins outline-0">
+      <div className="flex items-center mr-16 text-sm font-poppins">
+        <Icon className="mr-2">language</Icon>
+        <select className="bg-transparent outline-0">
           <option>English (US)</option>
-          <option>English (UK)</option>
         </select>
       </div>
 
       <div className="flex flex-col items-end font-poppins">
         <div className="flex items-center">
-          <Image className="mr-2 text-primary" src="/header/profile.svg" width="24" height="24" alt="profile" />
+          <Icon className="mr-2">profile</Icon>
           <span className="font-medium">Good Morning</span>
         </div>
 
         <div className="text-xs leading-[18px]">
-          <span className="mr-2">04 December 2022</span>
+          <span className="mr-3">04 December 2022</span>
           <span>22:45:04</span>
         </div>
       </div>
