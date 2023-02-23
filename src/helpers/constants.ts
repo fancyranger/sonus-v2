@@ -252,6 +252,139 @@ export const APP_DATA = {
         },
       },
     },
+    hypertension: {
+      to: '/hypertension',
+      title: 'Hypertension Dynamics',
+      description:
+        'The Hypertension Dynamics enables exploration of the behaviors, preferences, and knowledge of doctors regarding patient numbers, unmet needs, and therapeutics in the management of hypertension.',
+      bg: '#5FAD564D',
+      color: '#3B6E35',
+      header: {
+        title: 'Hypertension Dynamics Therapy Area Insight',
+      },
+      data: {
+        doctor: {
+          to: '/hypertension/doctor',
+          title: 'Hypertension Doctor Insight',
+          description:
+            'The Diabetes Dynamics offers insight on Type 1 and Type 2 diabetes, specifically on doctor’s behaviors, motivations, unmet patient needs and other critical informationto aid strategic plaaning, tactical exxecution and performance assessment.',
+          icon: 'doctor',
+          span: 1,
+          bg: '#BCA3C7',
+          color: '#674775',
+          header: {
+            title: 'Diabetes Dynamics - Doctor Insight',
+          },
+          data: {
+            'patient-opportunity-analysis': {
+              to: '/hypertension/doctor/patient-opportunity-analysis',
+              title: 'Patient Opportunity Analysis',
+              description:
+                'This analysis provides insight on number of patients encountered, newly diagnosed patients, number of patients encountered, newly diagnosed patients, and patients with uncontrolled type 1 and 2 diabetes respectively.',
+              bg: '#BCA3C7',
+              color: '#674775',
+            },
+            'prescription-dynamics': {
+              to: '/hypertension/doctor/prescription-dynamics',
+              title: 'Prescription Dynamics',
+              description:
+                'This analysis provides insight on Oral Antidiabetics and Insulin class preference for uncontrolled diabetes, molecule preference, choice of brands and generics, reported outcomes, FBG or HBA1c control, brand selection criteria, population on insulin and oral antidiabetics',
+              bg: '#5FAD564D',
+              color: '#3B6E35',
+            },
+            'unmet-treatment-objectives': {
+              to: '/hypertension/doctor/unmet-treatment-objectives',
+              title: 'Unmet Treatment Objectives',
+              description:
+                'This analysis provides insight on unmet treatment objectives for patients with type 1 and type 2 diabetes as treated with oral antidiabetics and insulins.',
+              bg: '#CBEEF34D',
+              color: '#289DAE',
+            },
+            'barriers-to-treatment': {
+              to: '/hypertension/doctor/barriers-to-treatment',
+              title: 'Barriers to Treatment',
+              description:
+                'This analysis provides insight on barriers to treatment for patients with type 1 and type 2 diabetes respectively in treatment with oral antidiabetics and insulins.',
+              bg: '#E7DDDD',
+              color: '#986D6D',
+            },
+          },
+        },
+        pharmacist: {
+          to: '/hypertension/pharmacist',
+          title: 'Hypertension Pharmacist Insight',
+          description:
+            'The Pharmacist Insight platform curates data from interviews of pharmacists following administration of critical questions that unveil opportunities in hospital and community pharmacies, as seen from trend of reported prescriptions and items dispensed, believes and behaviours regarding product switch, product stocking, patient encounters and demands, criteria for brand selection, barriers to accessing medicines, preferred digital channels, assessment of value of company field force and scientific engagement.',
+          icon: 'pharmacist',
+          span: 2,
+          bg: '#5FAD564D',
+          color: '#3B6E35',
+          header: {
+            title: 'Pharmacist Insight - Hypertension Dynamics',
+          },
+          data: {
+            'pharmacist-insight': {
+              to: '/hypertension/pharmacist/pharmacist-insight',
+              title: 'Pharmacist Insight',
+              description:
+                'This analysis provides insight on factors driving stocking of oral antidiabetics and insulins, and factors that motivates pharmacists to stock the two classes of drugs.',
+              bg: '#BCA3C7',
+              color: '#674775',
+            },
+            'prescription-dynamics': {
+              to: '/hypertension/pharmacist/prescription-dynamics',
+              title: 'Prescription Dynamics',
+              description:
+                'This analysis provides insight on product prescription and demand trends for oral antidiabetics and insulins including volume of prescriptions, prescription refills, pack purchase analytics, most prescribed molecules, most prescribed brands, doctors’ prescription by brand and generics, and impact of doctors prescription.',
+              bg: '#5FAD564D',
+              color: '#3B6E35',
+            },
+            'switch-analytics': {
+              to: '/hypertension/pharmacist/switch-analytics',
+              title: 'Switch Analytics',
+              description:
+                'This analysis provides insight on trend of oral antidiabetic brand switches by pharmacists in hospital and community pharmacies respectively, and also reason for the switch.',
+              bg: '#CBEEF34D',
+              color: '#289DAE',
+            },
+            'patient-insight': {
+              to: '/hypertension/pharmacist/patient-insight',
+              title: 'Patient Insight',
+              description:
+                'This analysis provides insight on patients’ loyalty and insistence on brands when prescribed oral antidiabetics.',
+              bg: '#E7DDDD',
+              color: '#986D6D',
+            },
+            'barriers-to-access': {
+              to: '/hypertension/pharmacist/barriers-to-access',
+              title: 'Barriers to Access',
+              description:
+                'This analysis provides insight on barriers of patients to accessing insulins and oral antidiabetic products when prescribed by doctors in both hospitals and community pharmacies respectively.',
+              bg: '#048A814D',
+              color: '#036D66',
+            },
+          },
+          analyses: {
+            'competitive-landscape-analysis': {
+              to: '/hypertension/pharmacist/competitive-landscape-analysis',
+              title: 'Competitive Landscape Analysis',
+              description:
+                'This analysis provides insight on pharmacists’ feedback on companies with the most value-adding field force and scientific engagement.',
+              bg: '#BCA3C7',
+              color: '#674775',
+            },
+            'digital-preference-analysis': {
+              to: '/hypertension/pharmacist/digital-preference-analysis',
+              title: 'Digital Preference Analysis',
+              description:
+                'This analysis provides insight on openness of pharmacists’ to be engaged virtually and most preferred digital channel for engagement by companies.',
+              bg: '#5FAD564D',
+              color: '#3B6E35',
+            },
+          },
+        },
+      },
+    },
   },
   references: [
     {
