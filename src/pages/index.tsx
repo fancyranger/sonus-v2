@@ -7,7 +7,7 @@ export default function Dashboard() {
   return (
     <>
       <Head>
-        <title>SONUS</title>
+        <title>SONUS Dashboard</title>
       </Head>
 
       <h3 className="mb-7">Hi Mr. Ayodeji Alaran!</h3>
@@ -78,7 +78,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-x-10 mb-32">
+      <div className="grid grid-cols-3 gap-x-10 mb-30">
         <div className="col-span-2">
           <div className="grid grid-cols-3 gap-5">
             {REFERENCE_MAP.map(({ title }) => (

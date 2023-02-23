@@ -1,15 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Icon from '@/components/Icon';
-import { INSIGHT_MAP } from '@/utils/constants';
+import { APP_DATA } from '@/utils/constants';
 
 export default function () {
-  const baseLink = '/diabetes';
-
   return (
     <>
       <Head>
-        <title>SONUS</title>
+        <title>SONUS Diabetes Dynamics Therapy Area Insight</title>
       </Head>
 
       <div className="content-header">
@@ -24,15 +22,15 @@ export default function () {
         <Link href="/">Back</Link>
       </div>
 
-      <div className="grid grid-cols-3 gap-x-14 mb-80">
-        {INSIGHT_MAP.map(({ to, title, description, icon, span = 1, bg, color }) => (
-          <div key={title} className="card" style={{ backgroundColor: bg, gridColumn: `span ${span} / span ${span}` }}>
+      <div className="grid grid-cols-3 gap-x-14 mb-30">
+        {Object.values(APP_DATA.diabetes.data).map(({ to, title, description, icon, span = 1, bg, color }) => (
+          <div key={to} className="card" style={{ backgroundColor: bg, gridColumn: `span ${span} / span ${span}` }}>
             <div>
               <Icon style={{ color }}>{icon}</Icon>
               <h3 style={{ color }}>{title}</h3>
             </div>
             <p>{description}</p>
-            <Link href={baseLink + to}>View more</Link>
+            <Link href={to}>View more</Link>
           </div>
         ))}
       </div>
