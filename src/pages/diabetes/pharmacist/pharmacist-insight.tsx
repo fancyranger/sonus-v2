@@ -6,13 +6,15 @@ import { joinTitle } from '@/helpers/utils';
 
 export default function () {
   const {
-    diabetes: {
-      data: {
-        pharmacist: {
-          to,
-          header: { title: leftTitle },
-          data: {
-            'pharmacist-insight': { title: rightTitle, description },
+    data: {
+      diabetes: {
+        data: {
+          pharmacist: {
+            to,
+            header: { title: leftTitle },
+            data: {
+              'pharmacist-insight': { title: rightTitle, description },
+            },
           },
         },
       },

@@ -7,9 +7,12 @@ import { APP_DATA } from '@/helpers/constants';
 export default function () {
   const {
     to,
-    diabetes: {
-      header: { title, description },
-      data,
+    data: {
+      diabetes: {
+        header: { title },
+        description,
+        data,
+      },
     },
   } = APP_DATA;
 
@@ -21,7 +24,7 @@ export default function () {
 
       <ContentHeader title={title} description={description} to={to} />
 
-      <div className="grid grid-cols-3 gap-x-14 mb-30">
+      <div className="grid grid-cols-3 gap-x-14 mb-20">
         {Object.values(data).map(({ to, title, description, icon, span = 1, bg, color }) => (
           <div key={to} className="card" style={{ backgroundColor: bg, gridColumn: `span ${span} / span ${span}` }}>
             <div>

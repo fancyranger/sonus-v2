@@ -5,14 +5,16 @@ import { APP_DATA } from '@/helpers/constants';
 
 export default function () {
   const {
-    diabetes: {
-      to,
-      data: {
-        doctor: {
-          header: { title },
-          description,
-          data,
-          analyses,
+    data: {
+      diabetes: {
+        to,
+        data: {
+          doctor: {
+            header: { title },
+            description,
+            data,
+            analyses,
+          },
         },
       },
     },
@@ -36,7 +38,7 @@ export default function () {
         ))}
       </div>
 
-      <div className="grid grid-cols-3 gap-5 mb-30">
+      <div className="grid grid-cols-3 gap-5 mb-20">
         {Object.values(analyses).map(({ to, title, description, bg, color }) => (
           <div key={to} className="card" style={{ backgroundColor: bg }}>
             <h3 style={{ color }}>{title}</h3>

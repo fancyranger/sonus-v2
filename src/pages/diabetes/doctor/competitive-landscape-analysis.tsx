@@ -6,13 +6,15 @@ import { joinTitle } from '@/helpers/utils';
 
 export default function () {
   const {
-    diabetes: {
-      data: {
-        doctor: {
-          to,
-          header: { title: leftTitle },
-          analyses: {
-            'competitive-landscape-analysis': { title: rightTitle, description },
+    data: {
+      diabetes: {
+        data: {
+          doctor: {
+            to,
+            header: { title: leftTitle },
+            analyses: {
+              'competitive-landscape-analysis': { title: rightTitle, description },
+            },
           },
         },
       },

@@ -12,27 +12,42 @@ export default function Sidebar() {
   };
 
   return (
-    <nav className="shrink-0 flex flex-col w-60 h-screen py-8">
+    <nav className="shrink-0 flex flex-col w-60 h-screen py-8 overflow-y-auto">
       <Link href="/" className="mx-auto mb-8 p-0 bg-transparent text-[28px] leading-8">
         SONUS™
       </Link>
 
-      <ul className="mb-40">
-        {ROUTES.map(({ to, label, icon }) => (
+      <ul>
+        <li className="nav-link">
+          <Link href="/" style={{ background: router.asPath === '/' ? '#56BDD3' : undefined }}>
+            <Icon>home</Icon>
+            <span>Home</span>
+            <Icon className="ml-auto">down</Icon>
+          </Link>
+        </li>
+
+        {ROUTES.map(({ to, label }) => (
           <li key={to} className="nav-link">
-            <Link href={to} style={{ background: router.asPath === to ? '#56BDD3' : undefined }}>
-              <Icon>{icon}</Icon>
-              <span>{label}</span>
+            <Link href={to} style={{ background: router.asPath.startsWith(to) ? '#56BDD3' : undefined }}>
+              <span className="ml-9">{label}</span>
             </Link>
           </li>
         ))}
+
+        <li className="nav-link">
+          <Link href="/cohort" style={{ background: router.asPath === '/cohort' ? '#56BDD3' : undefined }}>
+            <Icon>cohort</Icon>
+            <span>Cohort</span>
+            <Icon className="ml-auto">up</Icon>
+          </Link>
+        </li>
       </ul>
 
-      <div className="px-4">
+      <div className="p-4">
         <hr />
       </div>
 
-      <ul className="mt-auto mb-30">
+      <ul>
         {!isDashboard && (
           <li className="nav-link">
             <Link href="/support">
