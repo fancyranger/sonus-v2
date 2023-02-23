@@ -69,6 +69,7 @@ export const REFERENCE_MAP = [
 
 export const INSIGHT_MAP = [
   {
+    to: '/doctor',
     title: 'Diabetes Doctor Insight',
     description:
       'The Diabetes Dynamics offers insight on Type 1 and Type 2 diabetes, specifically on doctor’s behaviors, motivations, unmet patient needs and other critical informationto aid strategic plaaning, tactical exxecution and performance assessment.',
@@ -78,6 +79,7 @@ export const INSIGHT_MAP = [
     color: '#674775',
   },
   {
+    to: '/pharmacist',
     title: 'Diabetes Pharmacist Insight',
     description:
       'The Pharmacist Insight platform curates data from interviews of pharmacists following administration of critical questions that unveil opportunities in hospital and community pharmacies, as seen from trend of reported prescriptions and items dispensed, believes and behaviours regarding product switch, product stocking, patient encounters and demands, criteria for brand selection, barriers to accessing medicines, preferred digital channels, assessment of value of company field force and scientific engagement.',

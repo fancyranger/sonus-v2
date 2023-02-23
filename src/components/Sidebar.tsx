@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import Icon from '@/components/Icon';
 import { ROUTES } from '@/utils/constants';

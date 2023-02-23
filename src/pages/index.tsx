@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import Icon from '@/components/Icon';
 import { THERAPY_AREAS, REFERENCE_MAP } from '@/utils/constants';
@@ -15,12 +14,12 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-3 gap-x-10 mb-28">
         <div className="col-span-2">
-          <div className="content-header mb-7">
-            <h1 className="mb-7">
+          <div className="content-header">
+            <h1>
               Welcome to SONUS<sup>TM</sup>
             </h1>
 
-            <p className="mb-7">
+            <p>
               Helping you uncover new opportunities from insight on doctors and pharmacists knowledge and behaviours.
             </p>
 
@@ -59,12 +58,12 @@ export default function Dashboard() {
 
         <div className="flex flex-col">
           <div className="dashboard-card mb-16 bg-[#E7DDDD]">
-            <h3 className="mb-4 text-[#986D6D]">Facility Class</h3>
+            <h3 className="text-[#986D6D]">Facility Class</h3>
             <p>Government Teaching Hospitals, General Hospitals, Private Hospitals</p>
           </div>
 
           <div className="dashboard-card py-6 bg-[#C9BCBC]">
-            <h3 className="mb-4 text-[#5F7377]">Therapy Areas</h3>
+            <h3 className="text-[#5F7377]">Therapy Areas</h3>
             <div className="grid grid-cols-3 gap-4">
               {THERAPY_AREAS.map(({ to, icon, label }) => (
                 <Link key={to} href={to} className="therapy">

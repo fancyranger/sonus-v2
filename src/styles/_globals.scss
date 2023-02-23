@@ -35,12 +35,20 @@
   .content-header {
     @apply flex flex-col;
 
+    h1 {
+      @apply mb-7;
+    }
+
     p {
-      @apply text-cyan-blue-medium font-bold;
+      @apply mb-7 text-cyan-blue-medium font-bold;
     }
 
     div {
-      @apply px-6 py-5 bg-[#FFFFFFB2] rounded-[10px];
+      @apply px-6 py-5 mb-7 bg-[#FFFFFFB2] rounded-[10px];
+    }
+
+    a {
+      @apply w-fit px-10 mb-7;
     }
   }
 
@@ -62,6 +70,10 @@
 
   .dashboard-card {
     @apply min-h-[100px] p-4 rounded-[10px];
+
+    h3 {
+      @apply mb-4;
+    }
 
     p {
       @apply grow text-xs;
@@ -103,12 +115,20 @@
   .card {
     @apply flex flex-col min-h-[280px] p-5 rounded-[10px];
 
+    div {
+      @apply flex items-center mb-2;
+
+      svg {
+        @apply w-8 h-8 mr-3;
+      }
+    }
+
     h3 {
       @apply text-lg leading-6;
     }
 
     p {
-      @apply grow;
+      @apply grow mb-6;
     }
 
     a {
