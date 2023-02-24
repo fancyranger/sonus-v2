@@ -13,7 +13,6 @@ export default function () {
             header: { title },
             description,
             data,
-            analyses,
           },
         },
       },
@@ -28,18 +27,8 @@ export default function () {
 
       <ContentHeader title={title} description={description} to={to} />
 
-      <div className="grid grid-cols-3 gap-5 mb-10">
-        {Object.values(data).map(({ to, title, description, bg, color }) => (
-          <div key={to} className="card" style={{ backgroundColor: bg }}>
-            <h3 style={{ color }}>{title}</h3>
-            <p>{description}</p>
-            <Link href={to}>View more</Link>
-          </div>
-        ))}
-      </div>
-
       <div className="grid grid-cols-3 gap-5 mb-20">
-        {Object.values(analyses).map(({ to, title, description, bg, color }) => (
+        {Object.values(data).map(({ to, title, description, bg, color }) => (
           <div key={to} className="card" style={{ backgroundColor: bg }}>
             <h3 style={{ color }}>{title}</h3>
             <p>{description}</p>
